@@ -4,40 +4,36 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
-<meta name="theme-color" content="#06090d">
+<meta name="theme-color" content="#06080c">
 <title>看見你的聲音</title>
-  <script type="module" crossorigin src="./assets/index-CaR5pUFQ.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-B0WNMhYa.css">
+  <script type="module" crossorigin src="./assets/index-VA8Z4P8G.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-BjGeuEc8.css">
 </head>
 <body>
 <div id="app" data-task="0">
-  <header class="top" id="top">
+  <header class="top glass" id="top">
     <div class="steps"><i data-s="1"></i><i data-s="2"></i><i data-s="3"></i><i data-s="4"></i></div>
     <span id="stepTxt">看見你的聲音</span><span id="round"></span>
   </header>
   <section id="stage">
     <canvas id="gl"></canvas>
     <div id="labels"></div>
-    <i class="frame tl"></i><i class="frame tr"></i><i class="frame bl"></i><i class="frame br"></i>
-    <div id="trustTag" class="tag">◐ 推算｜用你的聲音推算的喉嚨形狀</div>
-    <div id="note"><b id="noteName">—</b><small id="noteSub"></small></div>
-    <div id="glotBox"><canvas id="glot"></canvas><span class="tag">○ 示意｜聲帶慢動作</span></div>
-    <canvas id="piano"></canvas>
-    <canvas id="needle"></canvas>
+    <div id="glotBox"><canvas id="glot"></canvas><span>聲帶 ○ 示意</span></div>
+    <div id="note" class="off"><b id="noteName">等你出聲</b><em id="noteZone"></em><small id="noteSub"></small></div>
   </section>
-  <section id="metrics">
-    <div class="m"><small>現在的音</small><b id="m1">—</b></div>
-    <div class="m"><small>準不準</small><b id="m2">—</b></div>
-    <div class="m"><small>聲帶每秒振動</small><b id="m3">—</b></div>
-    <div class="m"><small id="m4l">音域</small><b id="m4">—</b></div>
-  </section>
-  <section id="sub">
-    <div class="lane" id="laneSpec"><canvas></canvas><div class="lt"><b>● 聲紋</b>每一條橫線是你聲音的一層，越亮越強</div></div>
-    <div class="lane" id="lanePitch"><canvas></canvas><div class="lt"><b>● 音高線</b>你唱的音，越上面越高</div></div>
-    <div class="lane" id="laneZoom"><canvas></canvas><div class="lt"><b>● 音高放大鏡</b>線待在綠色帶子裡＝穩，小波浪是顫音</div></div>
-    <div id="cards" hidden><div class="track"></div><div class="dots"></div></div>
-  </section>
+  <div id="instr"></div>
   <section id="panel"></section>
+  <section id="sub">
+    <div id="readout"><span id="rdl">唱到的範圍</span><b id="rd">等你出聲</b></div>
+    <div class="main" id="lanePiano"><canvas></canvas></div>
+    <div class="main capt" id="laneZoom"><canvas></canvas><div class="lt"><b>穩定放大鏡</b>線待在綠色帶子裡＝穩</div></div>
+    <div class="main" id="scaleBox"><div id="livesc"></div></div>
+    <div class="main capt" id="lanePitch"><canvas></canvas><div class="lt"><b>音高線</b>橘色方塊是目標，綠線是你</div></div>
+    <div class="lane" id="laneSpec"><canvas></canvas><div class="lt"><b>聲音圖</b>每一條橫線是一個泛音，越亮越強</div></div>
+    <button class="detail-btn" id="detailBtn" type="button">看聲音細節 ▾</button>
+    <div id="cards" hidden></div>
+  </section>
+  <footer id="dock" class="glass"></footer>
 </div>
 <div id="sheet" class="sheet"></div>
 <div id="diag" aria-hidden="true"></div>
