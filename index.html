@@ -6,23 +6,37 @@
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#06090d">
 <title>看見你的聲音</title>
-  <script type="module" crossorigin src="./assets/index-C9vwGOZC.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-BrYaWP7p.css">
+  <script type="module" crossorigin src="./assets/index-BBOiOqoz.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-DCQi432l.css">
 </head>
 <body>
-<div id="app">
-  <header class="top">
+<div id="app" data-task="0">
+  <header class="top" id="top">
     <div class="steps"><i data-s="1"></i><i data-s="2"></i><i data-s="3"></i></div>
-    <span id="stepTxt">看見你的聲音</span>
+    <span id="stepTxt">看見你的聲音</span><span id="round"></span>
   </header>
   <section id="stage">
     <canvas id="gl"></canvas>
     <div id="labels"></div>
+    <i class="frame tl"></i><i class="frame tr"></i><i class="frame bl"></i><i class="frame br"></i>
+    <div id="trustTag" class="tag">◐ 推算｜用你的聲音推算的喉嚨形狀</div>
     <div id="note"><b id="noteName">—</b><small id="noteSub"></small></div>
-    <div id="badge" hidden></div>
-    <div id="demoTag">用你的聲音推算的示意圖</div>
+    <div id="glotBox"><canvas id="glot"></canvas><span class="tag">○ 示意｜聲帶慢動作</span></div>
+    <canvas id="piano"></canvas>
+    <canvas id="needle"></canvas>
   </section>
-  <section id="pitchWrap"><canvas id="pitch"></canvas><div id="pitchHint"></div></section>
+  <section id="metrics">
+    <div class="m"><small>現在的音</small><b id="m1">—</b></div>
+    <div class="m"><small>準不準</small><b id="m2">—</b></div>
+    <div class="m"><small>聲帶每秒振動</small><b id="m3">—</b></div>
+    <div class="m"><small id="m4l">音域</small><b id="m4">—</b></div>
+  </section>
+  <section id="sub">
+    <div class="lane" id="laneSpec"><canvas></canvas><div class="lt"><b>● 聲紋</b>每一條橫線是你聲音的一層，越亮越強</div></div>
+    <div class="lane" id="lanePitch"><canvas></canvas><div class="lt"><b>● 音高線</b>你唱的音，越上面越高</div></div>
+    <div class="lane" id="laneZoom"><canvas></canvas><div class="lt"><b>● 音高放大鏡</b>線待在綠色帶子裡＝穩，小波浪是顫音</div></div>
+    <div id="cards" hidden><div class="track"></div><div class="dots"></div></div>
+  </section>
   <section id="panel"></section>
 </div>
 <div id="sheet" class="sheet"></div>
