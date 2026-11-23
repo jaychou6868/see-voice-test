@@ -6,8 +6,8 @@
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#06080c">
 <title>看見你的聲音</title>
-  <script type="module" crossorigin src="./assets/index-MTJlXBKr.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-D4BZTGI_.css">
+  <script type="module" crossorigin src="./assets/index-BElfvZRb.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-DM7Nlf_I.css">
 </head>
 <body>
 <div id="app">
@@ -21,18 +21,18 @@
     <div id="labels" hidden></div>
     <div id="swipe" class="swipe"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M8 20h24M8 20l5-5M8 20l5 5M32 20l-5-5M32 20l-5 5M20 8v24M20 8l-5 5M20 8l5 5M20 32l-5-5M20 32l5-5"/></svg><span>手指<b>上下左右滑</b><br>可以轉動頭像</span></div>
     <button class="reset" id="resetCam" type="button">↺ 轉回側面</button>
-    <figure id="lxBox"><canvas id="lx"></canvas><figcaption id="lxCap">聲帶示意動畫</figcaption></figure>
+    <figure id="lxBox"><canvas id="lx"></canvas><figcaption id="lxCap">聲帶示意（慢動作）</figcaption></figure>
   </section>
-  <section id="now">
-    <div class="type"><b id="tName">等你出聲</b><small id="tPlain">隨便唱一個音、一句歌都可以</small></div>
+  <section id="now"><span class="newb" id="newB">新解鎖！</span>
+    <div class="type"><b id="tName">等你出聲</b><small id="tPlain">對著手機唱一聲「啊～」就開始</small></div>
     <div class="note"><b id="nName">—</b><small id="nHz"></small></div>
   </section>
   <div id="tip" class="tip"></div>
   <section id="meter" aria-label="聲音類型刻度">
-    <div class="m-bar"><div class="z" style="flex:.4">真音</div><div class="z" style="flex:.25">強混</div><div class="z" style="flex:.2">平衡混</div><div class="z" style="flex:.25">弱混</div><div class="z" style="flex:.3">假音</div><i class="m-dot"></i></div>
+    <div class="m-bar"><div class="z" style="--c:#ff4f7b">真音</div><div class="z" style="--c:#ffad4a">強混</div><div class="z" style="--c:#3ddbc9">平衡混</div><div class="z" style="--c:#5fa8ff">弱混</div><div class="z" style="--c:#b98cff">假音</div><i class="m-dot"></i></div>
     <div class="m-ends"><span>← 厚、像講話</span><span>輕、薄 →</span></div>
   </section>
-  <section id="pitch"><div class="lt"><b>音高線</b>顏色＝聲音類型</div><canvas></canvas></section>
+  <section id="pitch"><div class="lt"><b>音高線</b><span class="hl">↑ 越上面越高</span></div><canvas></canvas></section>
   <footer id="dock" class="glass">
     <button class="btn" id="sumBtn" type="button" disabled>唱 3 秒以上就能看總結</button>
   </footer>
