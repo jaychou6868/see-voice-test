@@ -6,33 +6,36 @@
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#06080c">
 <title>看見你的聲音</title>
-  <script type="module" crossorigin src="./assets/index--vB6WTgM.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-SfU-Me2t.css">
+  <script type="module" crossorigin src="./assets/index-NnYAT29t.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-D7v13iA3.css">
 </head>
 <body>
-<div id="app" data-task="0">
+<div id="app">
   <header class="top glass" id="top">
-    <span id="stepTxt">看見你的聲音</span>
-    <span class="rt"><span id="round"></span><div class="steps"><i data-s="1"></i><i data-s="2"></i><i data-s="3"></i><i data-s="4"></i></div></span>
+    <span class="brand">看見你的聲音<i id="mic" class="mic" title="麥克風"></i></span>
+    <span class="unl" id="unl" aria-label="解鎖了幾種聲音"><i></i><i></i><i></i><i></i><i></i></span>
+    <button class="tbtn" id="howBtn" type="button">玩法小提示</button>
   </header>
   <section id="stage">
-    <canvas id="gl"></canvas>
-    <div id="labels"></div>
-    <div id="glotBox"><canvas id="glot"></canvas><span>聲帶 ○ 示意</span></div>
-    <div id="note" class="off"><b id="noteName">等你出聲</b><em id="noteZone"></em><small id="noteSub"></small></div>
+    <canvas id="gl" aria-label="3D 頭像，可以用手指滑動轉動"></canvas>
+    <div id="labels" hidden></div>
+    <div id="swipe" class="swipe"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M8 20h24M8 20l5-5M8 20l5 5M32 20l-5-5M32 20l-5 5M20 8v24M20 8l-5 5M20 8l5 5M20 32l-5-5M20 32l5-5"/></svg><span>手指<b>上下左右滑</b><br>可以轉動頭像</span></div>
+    <button class="reset" id="resetCam" type="button">↺ 轉回側面</button>
+    <figure id="lxBox"><canvas id="lx"></canvas><figcaption id="lxCap">聲帶示意動畫</figcaption></figure>
   </section>
-  <div id="instr"></div>
-  <section id="panel"></section>
-  <section id="sub">
-    <div id="readout"><span id="rdl">唱到的範圍</span><b id="rd">等你出聲</b></div>
-    <div class="main" id="lanePiano"><canvas></canvas></div>
-    <div class="main capt" id="laneZoom"><canvas></canvas><div class="lt"><b>穩定放大鏡</b>線在綠色帶子裡＝很穩</div></div>
-    <div class="main" id="scaleBox"><div id="livesc"></div></div>
-    <div class="main capt" id="lanePitch"><canvas></canvas><div class="lt"><b>音高線</b>橘色方塊是目標，綠線是你</div></div>
-    <div class="lane" id="laneSpec"><canvas></canvas><div class="lt"><b>聲音圖</b>每一條橫線是一個泛音，越亮越強</div></div>
-    <div id="cards" hidden></div>
+  <section id="now">
+    <div class="type"><b id="tName">等你出聲</b><small id="tPlain">隨便唱一個音、一句歌都可以</small></div>
+    <div class="note"><b id="nName">—</b><small id="nHz"></small></div>
   </section>
-  <footer id="dock" class="glass"></footer>
+  <div id="tip" class="tip"></div>
+  <section id="meter" aria-label="聲音類型刻度">
+    <div class="m-bar"><div class="z" style="flex:.4">真音</div><div class="z" style="flex:.25">強混</div><div class="z" style="flex:.2">平衡混</div><div class="z" style="flex:.25">弱混</div><div class="z" style="flex:.3">假音</div><i class="m-dot"></i></div>
+    <div class="m-ends"><span>← 厚、像講話</span><span>輕、薄 →</span></div>
+  </section>
+  <section id="pitch"><div class="lt"><b>音高線</b>顏色＝聲音類型</div><canvas></canvas></section>
+  <footer id="dock" class="glass">
+    <button class="btn" id="sumBtn" type="button" disabled>唱 3 秒以上就能看總結</button>
+  </footer>
 </div>
 <div id="sheet" class="sheet"></div>
 <div id="diag" aria-hidden="true"></div>
